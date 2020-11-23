@@ -63,8 +63,11 @@ client.on('message', msg => {
 	}
 });
 client.on('message', msg => {
-	if (msg.content === 'c!test') {
-		msg.reply('BRUH');
-	}
+	if (!msg.content.startsWith(PREFIX + 'brazil')) return;
+		msg.reply('Im sending you to brazil')
 });
+if (message.mentions.users.has(client.user.id) && !message.author.bot) {
+	message.reply('What you want?')
+	return
+  };
 client.login(process.env.BOT_TOKEN);
