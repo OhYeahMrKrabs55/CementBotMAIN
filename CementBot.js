@@ -6,8 +6,10 @@ const cement = ['https://cdn.discordapp.com/attachments/505861794066202644/78025
 const basspro = ['https://cdn.discordapp.com/attachments/778730061129842708/780273860846682112/image0.png','https://cdn.discordapp.com/attachments/778730061129842708/780273861135433728/image1.png','https://cdn.discordapp.com/attachments/778730061129842708/780273861378965514/image2.jpg','https://cdn.discordapp.com/attachments/778730061129842708/780273861639667712/image3.png','https://cdn.discordapp.com/attachments/505861794066202644/780274366146412615/image1.png','https://cdn.discordapp.com/attachments/505861794066202644/780274366436081684/image2.png','https://cdn.discordapp.com/attachments/505861794066202644/780274367056576542/image4.png','https://cdn.discordapp.com/attachments/505861794066202644/780274367304957972/image5.png','https://cdn.discordapp.com/attachments/505861794066202644/780276571978072074/image0.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276572656762900/image1.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276572862152704/image2.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276573101883412/image3.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276573345021972/image4.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276573696950302/image5.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276573983080458/image6.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276574405525514/image7.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276574728749086/image8.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780276574988664862/image9.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277369533497344/image0.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277369747275776/image1.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277369931431947/image2.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277370145079326/image3.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277370413121586/image4.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277370657308672/image5.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277370879344670/image6.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277371335868416/image8.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780277371517403156/image9.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780278010880065536/image0.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780278011089387540/image1.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780278011273543690/image2.jpg','https://cdn.discordapp.com/attachments/505861794066202644/780278011425587230/image3.jpg']
 const facts = ['cement is tasty','cement is good','EAT CEMENT']
 const creator = ['Father Pucci']
-const troll = ['https://cdn.discordapp.com/attachments/776155110174752778/778591521762050058/trollface.mp4','https://cdn.discordapp.com/attachments/728388280353292319/780565768018329630/EnIs410XEAAfnck.png','https://cdn.discordapp.com/attachments/728388280353292319/780565173613625364/EnhkXU9XcAIstA-.png']
-const femur = ['https://cdn.discordapp.com/attachments/602593912984567808/780573397716566027/video0-6.mp4']
+const troll = ['https://cdn.discordapp.com/attachments/776155110174752778/778591521762050058/trollface.mp4','https://cdn.discordapp.com/attachments/728388280353292319/780565768018329630/EnIs410XEAAfnck.png','https://cdn.discordapp.com/attachments/728388280353292319/780565173613625364/EnhkXU9XcAIstA-.png','https://discordapp.com/channels/444346487002890260/728388280353292319/780577438572216341','https://cdn.discordapp.com/attachments/728388280353292319/780579971114205194/oil.png']
+const femur = ['https://cdn.discordapp.com/attachments/602593912984567808/780573397716566027/video0-6.mp4','https://cdn.discordapp.com/attachments/602593912984567808/780576220332425236/69102623_728667830889049_7985382097618252909_n.mp4','https://cdn.discordapp.com/attachments/602593912984567808/780576220726427658/1960315096806761539_5562344904.mp4','https://cdn.discordapp.com/attachments/728388280353292319/780577193033072680/video0.mov']
+const discordmods = ['https://tenor.com/view/discord-moderator-kitten-gif-18177005','https://tenor.com/view/discord-mods-discord-mods-discord-mods-be-like-gif-18886289']
+const shitpost = ['https://cdn.discordapp.com/attachments/728388280353292319/780577890273853460/image0.jpg','https://tenor.com/view/going-cum-mode-cum-femboy-chungus-celeste-gif-18210611','https://cdn.discordapp.com/attachments/728388280353292319/780579559778418698/image0.jpg']
 
 client.on("ready", () =>{
     console.log(`Logged in as ${client.user.tag}!`);
@@ -48,6 +50,8 @@ client.on('message', msg => {
 		.addField ('c!brazil', 'sends you to brazil')
 		.addField ('c!troll', 'you have been le trolled')
 		.addField ('c!femur', 'le femur breaker')
+		.addField ('c!discordmods', 'discordmods be like')
+		.addField ('c!shitpost', 'le top grade shitposts')
 		.addField ('c!updatelog', 'tells you the current updates')
 		.setFooter(' Requested by ' + msg.author.username + ' Created by ' + creator )
 		.setColor(0xFFFAF0)
@@ -80,7 +84,7 @@ client.on('message', msg => {
 client.on('message', msg => {
 	if (!msg.content.startsWith(PREFIX + 'updatelog')) return;
 	var embed3 = new Discord.RichEmbed()
-	.addField ('as of 11/23/2020 at 6:21 PM there is a new cmd c!femur enjoy ~ Father Pucci.')
+	.addField ('as of 11/23/2020 at 6:42 PM there is 2 new cmds c!shitpost, and c!discordmods enjoy ~ Father Pucci.')
 	.setFooter(' Requested by ' + msg.author.username + ' Created by ' + creator )
 		.setColor(0xEE82EE)
 	.setColor(0xEE82EE)
@@ -89,6 +93,16 @@ client.on('message', msg => {
 client.on('message', msg => {
 	if (!msg.content.startsWith(PREFIX + 'femur')) return;
 		var response1 = femur [Math.floor(Math.random()*femur .length)];
+		msg.reply(response1);
+});
+client.on('message', msg => {
+	if (!msg.content.startsWith(PREFIX + 'discordmods')) return;
+		var response1 = discordmods [Math.floor(Math.random()*discordmods .length)];
+		msg.reply(response1);
+});
+client.on('message', msg => {
+	if (!msg.content.startsWith(PREFIX + 'shitpost')) return;
+		var response1 = shitpost [Math.floor(Math.random()*shitpost .length)];
 		msg.reply(response1);
 });
 client.login(process.env.BOT_TOKEN);
