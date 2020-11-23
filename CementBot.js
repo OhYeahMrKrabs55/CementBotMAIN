@@ -7,6 +7,7 @@ const basspro = ['https://cdn.discordapp.com/attachments/778730061129842708/7802
 const facts = ['cement is tasty','cement is good','EAT CEMENT']
 const creator = ['Father Pucci']
 const troll = ['https://cdn.discordapp.com/attachments/776155110174752778/778591521762050058/trollface.mp4','https://cdn.discordapp.com/attachments/728388280353292319/780565768018329630/EnIs410XEAAfnck.png','https://cdn.discordapp.com/attachments/728388280353292319/780565173613625364/EnhkXU9XcAIstA-.png']
+const femur = ['https://cdn.discordapp.com/attachments/602593912984567808/780573397716566027/video0-6.mp4']
 
 client.on("ready", () =>{
     console.log(`Logged in as ${client.user.tag}!`);
@@ -46,6 +47,7 @@ client.on('message', msg => {
 		.addField ('c!basspro', 'BASSPROMEMES')
 		.addField ('c!brazil', 'sends you to brazil')
 		.addField ('c!troll', 'you have been le trolled')
+		.addField ('c!femur', 'le femur breaker')
 		.addField ('c!updatelog', 'tells you the current updates')
 		.setFooter(' Requested by ' + msg.author.username + ' Created by ' + creator )
 		.setColor(0xFFFAF0)
@@ -78,10 +80,15 @@ client.on('message', msg => {
 client.on('message', msg => {
 	if (!msg.content.startsWith(PREFIX + 'updatelog')) return;
 	var embed3 = new Discord.RichEmbed()
-	.addField ('This is a new command currently being tested, If it works out updates to this bot can be found by using this command!')
+	.addField ('as of 11/23/2020 at 6:21 PM there is a new cmd c!femur enjoy ~ Father Pucci.')
 	.setFooter(' Requested by ' + msg.author.username + ' Created by ' + creator )
 		.setColor(0xEE82EE)
 	.setColor(0xEE82EE)
 	msg.channel.sendEmbed(embed3);
+});
+client.on('message', msg => {
+	if (!msg.content.startsWith(PREFIX + 'femur')) return;
+		var response1 = femur [Math.floor(Math.random()*femur .length)];
+		msg.reply(response1);
 });
 client.login(process.env.BOT_TOKEN);
