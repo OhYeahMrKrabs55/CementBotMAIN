@@ -62,4 +62,9 @@ client.on('message', msg => {
 		msg.reply('No, *slap*');
 	}
 });
+client.on('message', msg => {
+	if (msg.content === 'c!test') {
+		msg.reply('BRUH');
+	}
+});
 client.login(process.env.BOT_TOKEN);
