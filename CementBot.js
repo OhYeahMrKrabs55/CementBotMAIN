@@ -67,10 +67,4 @@ client.on('message', msg => {
 	if (!msg.content.startsWith(PREFIX + 'brazil')) return;
 		msg.reply('Im sending you to brazil, *BOOT*')
 });
-client.on('message', msg => {
-	if (message.mentions.users.has(client.user.id) && !message.author.bot) {
-	message.reply('What you want?')
-	return
-  };
-});
 client.login(process.env.BOT_TOKEN);
