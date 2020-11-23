@@ -43,6 +43,7 @@ client.on('message', msg => {
 		.addField ('c!facts', 'Drops a random meme')
 		.addField ('c!invite', 'Invite me to YOUR server!')
 		.addField ('c!basspro', 'BASSPROMEMES')
+		.addField ('c!brazil', 'sends you to brazil')
 		.setFooter(' Requested by ' + msg.author.username + ' Created by ' + creator )
 		.setColor(0xFFFAF0)
 		msg.channel.sendEmbed(embed2);
@@ -64,10 +65,12 @@ client.on('message', msg => {
 });
 client.on('message', msg => {
 	if (!msg.content.startsWith(PREFIX + 'brazil')) return;
-		msg.reply('Im sending you to brazil')
+		msg.reply('Im sending you to brazil, *BOOT*')
 });
-if (message.mentions.users.has(client.user.id) && !message.author.bot) {
+client.on('message', msg => {
+	if (message.mentions.users.has(client.user.id) && !message.author.bot) {
 	message.reply('What you want?')
 	return
   };
+});
 client.login(process.env.BOT_TOKEN);
